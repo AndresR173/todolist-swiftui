@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct TaskEditingView: View {
-    @EnvironmentObject var userData: TaskData
+    @EnvironmentObject var userData: DataProvider
     
     private let task: Task
     @State var draftTitle: String = ""
@@ -54,7 +54,7 @@ struct TaskEditingView: View {
 }
 
 struct TaskEditingView_Previews: PreviewProvider {
-    static let data = TaskData()
+    static let data = DataProvider()
     static var previews: some View {
         TaskEditingView(task: defaultTasks.randomElement()!).environmentObject(data)
     }

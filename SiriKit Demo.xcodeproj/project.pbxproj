@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		BA0A6D1223D64A8200842470 /* TaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6D1123D64A8200842470 /* TaskItemView.swift */; };
 		BA0A6D1423D64E4700842470 /* TaskEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6D1323D64E4700842470 /* TaskEditingView.swift */; };
+		BA9C131F23D7737A005DC968 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C131E23D7737A005DC968 /* UserDefaults+Extension.swift */; };
+		BA9C132223D79DCE005DC968 /* TasksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C132123D79DCE005DC968 /* TasksViewModel.swift */; };
+		BA9C132423D79DE5005DC968 /* TaskItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C132323D79DE5005DC968 /* TaskItemViewModel.swift */; };
 		BADAFFDF23D6102D00317A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAFFDE23D6102D00317A4F /* AppDelegate.swift */; };
 		BADAFFE123D6102D00317A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAFFE023D6102D00317A4F /* SceneDelegate.swift */; };
 		BADAFFE323D6102D00317A4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAFFE223D6102D00317A4F /* ContentView.swift */; };
@@ -17,12 +20,15 @@
 		BADAFFEB23D6102F00317A4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADAFFE923D6102F00317A4F /* LaunchScreen.storyboard */; };
 		BADAFFF423D611CB00317A4F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAFFF323D611CB00317A4F /* Task.swift */; };
 		BADAFFF723D640CB00317A4F /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAFFF623D640CB00317A4F /* UserDefaults.swift */; };
-		BADAFFFA23D6439500317A4F /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAFFF923D6439500317A4F /* TaskData.swift */; };
+		BADAFFFA23D6439500317A4F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAFFF923D6439500317A4F /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BA0A6D1123D64A8200842470 /* TaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemView.swift; sourceTree = "<group>"; };
 		BA0A6D1323D64E4700842470 /* TaskEditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditingView.swift; sourceTree = "<group>"; };
+		BA9C131E23D7737A005DC968 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		BA9C132123D79DCE005DC968 /* TasksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewModel.swift; sourceTree = "<group>"; };
+		BA9C132323D79DE5005DC968 /* TaskItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemViewModel.swift; sourceTree = "<group>"; };
 		BADAFFDB23D6102D00317A4F /* SiriKit Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SiriKit Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADAFFDE23D6102D00317A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BADAFFE023D6102D00317A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +39,7 @@
 		BADAFFEC23D6102F00317A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BADAFFF323D611CB00317A4F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		BADAFFF623D640CB00317A4F /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
-		BADAFFF923D6439500317A4F /* TaskData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
+		BADAFFF923D6439500317A4F /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA9C132023D79DBB005DC968 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BA9C132123D79DCE005DC968 /* TasksViewModel.swift */,
+				BA9C132323D79DE5005DC968 /* TaskItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		BADAFFD223D6102D00317A4F = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +81,7 @@
 		BADAFFDD23D6102D00317A4F /* SiriKit Demo */ = {
 			isa = PBXGroup;
 			children = (
+				BA9C132023D79DBB005DC968 /* ViewModel */,
 				BADAFFFC23D6460D00317A4F /* App */,
 				BADAFFE423D6102F00317A4F /* Assets.xcassets */,
 				BADAFFF823D6438200317A4F /* Data */,
@@ -97,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				BADAFFF623D640CB00317A4F /* UserDefaults.swift */,
+				BA9C131E23D7737A005DC968 /* UserDefaults+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -104,7 +121,7 @@
 		BADAFFF823D6438200317A4F /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				BADAFFF923D6439500317A4F /* TaskData.swift */,
+				BADAFFF923D6439500317A4F /* DataProvider.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -204,11 +221,14 @@
 				BADAFFF423D611CB00317A4F /* Task.swift in Sources */,
 				BADAFFF723D640CB00317A4F /* UserDefaults.swift in Sources */,
 				BA0A6D1423D64E4700842470 /* TaskEditingView.swift in Sources */,
-				BADAFFFA23D6439500317A4F /* TaskData.swift in Sources */,
+				BADAFFFA23D6439500317A4F /* DataProvider.swift in Sources */,
 				BA0A6D1223D64A8200842470 /* TaskItemView.swift in Sources */,
 				BADAFFDF23D6102D00317A4F /* AppDelegate.swift in Sources */,
 				BADAFFE123D6102D00317A4F /* SceneDelegate.swift in Sources */,
+				BA9C132423D79DE5005DC968 /* TaskItemViewModel.swift in Sources */,
+				BA9C131F23D7737A005DC968 /* UserDefaults+Extension.swift in Sources */,
 				BADAFFE323D6102D00317A4F /* ContentView.swift in Sources */,
+				BA9C132223D79DCE005DC968 /* TasksViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

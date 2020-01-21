@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TaskItemView: View {
     //MARK: - Properties
-    @EnvironmentObject var userData: TaskData
+    @EnvironmentObject var userData: DataProvider
 
     let task: Task
     @Binding var isEditing: Bool
@@ -54,7 +54,7 @@ struct TaskItemView: View {
 }
 
 struct TaskItemView_Previews: PreviewProvider {
-    static let data = TaskData()
+    static let data = DataProvider()
     static var previews: some View {
         TaskItemView(task: defaultTasks.randomElement()!, isEditing: .constant(false)).environmentObject(data)
     }

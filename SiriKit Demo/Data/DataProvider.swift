@@ -14,7 +14,7 @@ let defaultTasks: [Task] = [
     Task(title: "Watch WWDC19 Keynote 🎉", isDone: true),
 ]
 
-final class TaskData: ObservableObject {
+final class DataProvider: ObservableObject {
     init() {
         let data = UserDefaults.standard.data(forKey: "Tasks")
         let value = data.flatMap { try? JSONDecoder().decode([Task].self, from: $0) }
