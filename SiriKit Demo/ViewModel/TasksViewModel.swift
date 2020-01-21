@@ -14,13 +14,18 @@ class TasksViewModel: ObservableObject  {
 
     // MARK: - Properties
     @Published var tasks: [Task]
+    let dataProvider: DataProvider = DataProvider()
     var draftTitle: String = ""
-    var isEditing: Bool = false
+    @Published var isEditing: Bool = false
 
-    // MARK: - Init
-
+    //MARK: -  Init
     init() {
-        self.tasks = DataProvider().tasks
+        tasks  = DataProvider().getTasks()
+
+        let cancelable = $tasks.sink(receiveValue: {
+            let data = try? JSONEncoder().encode($0)
+            UserDefaults.standard.set(data, forKey: "Tasks")
+        })
     }
 
     // MARK: - Helpers
@@ -30,5 +35,18 @@ class TasksViewModel: ObservableObject  {
         let newTask = Task(title: self.draftTitle, isDone: false)
         self.tasks.insert(newTask, at: 0)
         self.draftTitle = ""
+    }
+
+    func toggleDone(task: Task) {
+      guard !self.isEditing else { return }
+      guard let index = self.tasks.firstIndex(where: { $0.id == task.id }) else { return }
+      self.tasks[index].isDone.toggle()
+    }
+
+    func delete(task: Task) {
+        self.tasks.removeAll(where: { $0.id == task.id })
+        if self.tasks.isEmpty {
+            self.isEditing = false
+        }
     }
 }

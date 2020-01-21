@@ -11,10 +11,11 @@ import Combine
 import SwiftUI
 
 class TaskItemViewModel: ObservableObject {
+    let task: Task
+    @State var isEditing: Bool
 
-//    @Published var tasks: [Task]
-//    let task: Task
-//    @Binding var isEditing: Bool
-
-
+    init(task: Task, isEditing: Bool) {
+        self.task = task
+        self.isEditing = isEditing
+    }
 }
