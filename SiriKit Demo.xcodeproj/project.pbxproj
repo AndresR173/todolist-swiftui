@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA0A6D1223D64A8200842470 /* TaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6D1123D64A8200842470 /* TaskItemView.swift */; };
+		BA0A6D1423D64E4700842470 /* TaskEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6D1323D64E4700842470 /* TaskEditingView.swift */; };
 		BADAFFDF23D6102D00317A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAFFDE23D6102D00317A4F /* AppDelegate.swift */; };
 		BADAFFE123D6102D00317A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAFFE023D6102D00317A4F /* SceneDelegate.swift */; };
 		BADAFFE323D6102D00317A4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAFFE223D6102D00317A4F /* ContentView.swift */; };
 		BADAFFE523D6102F00317A4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BADAFFE423D6102F00317A4F /* Assets.xcassets */; };
 		BADAFFE823D6102F00317A4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BADAFFE723D6102F00317A4F /* Preview Assets.xcassets */; };
 		BADAFFEB23D6102F00317A4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BADAFFE923D6102F00317A4F /* LaunchScreen.storyboard */; };
+		BADAFFF423D611CB00317A4F /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAFFF323D611CB00317A4F /* Task.swift */; };
+		BADAFFF723D640CB00317A4F /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAFFF623D640CB00317A4F /* UserDefaults.swift */; };
+		BADAFFFA23D6439500317A4F /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADAFFF923D6439500317A4F /* TaskData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA0A6D1123D64A8200842470 /* TaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemView.swift; sourceTree = "<group>"; };
+		BA0A6D1323D64E4700842470 /* TaskEditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditingView.swift; sourceTree = "<group>"; };
 		BADAFFDB23D6102D00317A4F /* SiriKit Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SiriKit Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADAFFDE23D6102D00317A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BADAFFE023D6102D00317A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		BADAFFE723D6102F00317A4F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BADAFFEA23D6102F00317A4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BADAFFEC23D6102F00317A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BADAFFF323D611CB00317A4F /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		BADAFFF623D640CB00317A4F /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		BADAFFF923D6439500317A4F /* TaskData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,14 +66,13 @@
 		BADAFFDD23D6102D00317A4F /* SiriKit Demo */ = {
 			isa = PBXGroup;
 			children = (
-				BADAFFF223D610CE00317A4F /* Model */,
-				BADAFFDE23D6102D00317A4F /* AppDelegate.swift */,
-				BADAFFE023D6102D00317A4F /* SceneDelegate.swift */,
-				BADAFFE223D6102D00317A4F /* ContentView.swift */,
+				BADAFFFC23D6460D00317A4F /* App */,
 				BADAFFE423D6102F00317A4F /* Assets.xcassets */,
-				BADAFFE923D6102F00317A4F /* LaunchScreen.storyboard */,
-				BADAFFEC23D6102F00317A4F /* Info.plist */,
+				BADAFFF823D6438200317A4F /* Data */,
+				BADAFFF223D610CE00317A4F /* Models */,
 				BADAFFE623D6102F00317A4F /* Preview Content */,
+				BADAFFF523D640B400317A4F /* Utils */,
+				BADAFFFB23D6460000317A4F /* View */,
 			);
 			path = "SiriKit Demo";
 			sourceTree = "<group>";
@@ -76,11 +85,49 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		BADAFFF223D610CE00317A4F /* Model */ = {
+		BADAFFF223D610CE00317A4F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BADAFFF323D611CB00317A4F /* Task.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BADAFFF523D640B400317A4F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BADAFFF623D640CB00317A4F /* UserDefaults.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BADAFFF823D6438200317A4F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BADAFFF923D6439500317A4F /* TaskData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BADAFFFB23D6460000317A4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BADAFFE223D6102D00317A4F /* ContentView.swift */,
+				BA0A6D1123D64A8200842470 /* TaskItemView.swift */,
+				BA0A6D1323D64E4700842470 /* TaskEditingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BADAFFFC23D6460D00317A4F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BADAFFDE23D6102D00317A4F /* AppDelegate.swift */,
+				BADAFFE023D6102D00317A4F /* SceneDelegate.swift */,
+				BADAFFE923D6102F00317A4F /* LaunchScreen.storyboard */,
+				BADAFFEC23D6102F00317A4F /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +201,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADAFFF423D611CB00317A4F /* Task.swift in Sources */,
+				BADAFFF723D640CB00317A4F /* UserDefaults.swift in Sources */,
+				BA0A6D1423D64E4700842470 /* TaskEditingView.swift in Sources */,
+				BADAFFFA23D6439500317A4F /* TaskData.swift in Sources */,
+				BA0A6D1223D64A8200842470 /* TaskItemView.swift in Sources */,
 				BADAFFDF23D6102D00317A4F /* AppDelegate.swift in Sources */,
 				BADAFFE123D6102D00317A4F /* SceneDelegate.swift in Sources */,
 				BADAFFE323D6102D00317A4F /* ContentView.swift in Sources */,
@@ -296,7 +348,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SiriKit Demo/Preview Content\"";
 				DEVELOPMENT_TEAM = 47WD53H47N;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "SiriKit Demo/Info.plist";
+				INFOPLIST_FILE = "SiriKit Demo/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +368,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SiriKit Demo/Preview Content\"";
 				DEVELOPMENT_TEAM = 47WD53H47N;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "SiriKit Demo/Info.plist";
+				INFOPLIST_FILE = "SiriKit Demo/App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
