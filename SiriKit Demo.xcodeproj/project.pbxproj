@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41A14ABC23D7DC8600013DD9 /* TodoIntent.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 41A14ABB23D7DC8600013DD9 /* TodoIntent.intentdefinition */; };
+		41A14ABE23D7E0F300013DD9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A14ABD23D7E0F300013DD9 /* Constants.swift */; };
 		BA0A6D1223D64A8200842470 /* TaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6D1123D64A8200842470 /* TaskItemView.swift */; };
 		BA0A6D1423D64E4700842470 /* TaskEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0A6D1323D64E4700842470 /* TaskEditingView.swift */; };
 		BA9C131F23D7737A005DC968 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C131E23D7737A005DC968 /* UserDefaults+Extension.swift */; };
@@ -24,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41A14AB723D7DB5F00013DD9 /* SiriKit Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SiriKit Demo.entitlements"; sourceTree = "<group>"; };
+		41A14ABB23D7DC8600013DD9 /* TodoIntent.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = TodoIntent.intentdefinition; sourceTree = "<group>"; };
+		41A14ABD23D7E0F300013DD9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BA0A6D1123D64A8200842470 /* TaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItemView.swift; sourceTree = "<group>"; };
 		BA0A6D1323D64E4700842470 /* TaskEditingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskEditingView.swift; sourceTree = "<group>"; };
 		BA9C131E23D7737A005DC968 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
@@ -53,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41A14AB823D7DB6B00013DD9 /* SiriKit+Intents */ = {
+			isa = PBXGroup;
+			children = (
+				41A14ABB23D7DC8600013DD9 /* TodoIntent.intentdefinition */,
+			);
+			path = "SiriKit+Intents";
+			sourceTree = "<group>";
+		};
 		BA9C132023D79DBB005DC968 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,14 +94,15 @@
 		BADAFFDD23D6102D00317A4F /* SiriKit Demo */ = {
 			isa = PBXGroup;
 			children = (
-				BA9C132023D79DBB005DC968 /* ViewModel */,
 				BADAFFFC23D6460D00317A4F /* App */,
 				BADAFFE423D6102F00317A4F /* Assets.xcassets */,
 				BADAFFF823D6438200317A4F /* Data */,
 				BADAFFF223D610CE00317A4F /* Models */,
 				BADAFFE623D6102F00317A4F /* Preview Content */,
+				41A14AB723D7DB5F00013DD9 /* SiriKit Demo.entitlements */,
 				BADAFFF523D640B400317A4F /* Utils */,
 				BADAFFFB23D6460000317A4F /* View */,
+				BA9C132023D79DBB005DC968 /* ViewModel */,
 			);
 			path = "SiriKit Demo";
 			sourceTree = "<group>";
@@ -112,8 +126,10 @@
 		BADAFFF523D640B400317A4F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				41A14AB823D7DB6B00013DD9 /* SiriKit+Intents */,
 				BADAFFF623D640CB00317A4F /* UserDefaults.swift */,
 				BA9C131E23D7737A005DC968 /* UserDefaults+Extension.swift */,
+				41A14ABD23D7E0F300013DD9 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -218,12 +234,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A14ABC23D7DC8600013DD9 /* TodoIntent.intentdefinition in Sources */,
 				BADAFFF423D611CB00317A4F /* Task.swift in Sources */,
 				BADAFFF723D640CB00317A4F /* UserDefaults.swift in Sources */,
 				BA0A6D1423D64E4700842470 /* TaskEditingView.swift in Sources */,
 				BADAFFFA23D6439500317A4F /* DataProvider.swift in Sources */,
 				BA0A6D1223D64A8200842470 /* TaskItemView.swift in Sources */,
 				BADAFFDF23D6102D00317A4F /* AppDelegate.swift in Sources */,
+				41A14ABE23D7E0F300013DD9 /* Constants.swift in Sources */,
 				BADAFFE123D6102D00317A4F /* SceneDelegate.swift in Sources */,
 				BA9C132423D79DE5005DC968 /* TaskItemViewModel.swift in Sources */,
 				BA9C131F23D7737A005DC968 /* UserDefaults+Extension.swift in Sources */,
@@ -364,6 +382,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SiriKit Demo/SiriKit Demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SiriKit Demo/Preview Content\"";
 				DEVELOPMENT_TEAM = 47WD53H47N;
@@ -384,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SiriKit Demo/SiriKit Demo.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SiriKit Demo/Preview Content\"";
 				DEVELOPMENT_TEAM = 47WD53H47N;
